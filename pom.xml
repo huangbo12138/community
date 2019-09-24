@@ -36,11 +36,6 @@
             <version>1.2.60</version>
         </dependency>
 
-        <dependency>
-            <groupId>org.mybatis.spring.boot</groupId>
-            <artifactId>mybatis-spring-boot-starter</artifactId>
-            <version>2.1.0</version>
-        </dependency>
         <!-- https://mvnrepository.com/artifact/com.h2database/h2 -->
         <dependency>
             <groupId>com.h2database</groupId>
@@ -69,6 +64,13 @@
             <artifactId>h2</artifactId>
         </dependency>
 
+        <dependency>
+            <groupId>org.flywaydb</groupId>
+            <artifactId>flyway-core</artifactId>
+            <version>6.0.3</version>
+        </dependency>
+
+
     </dependencies>
 
     <build>
@@ -82,7 +84,7 @@
                 <artifactId>flyway-maven-plugin</artifactId>
                 <version>6.0.3</version>
                 <configuration>
-                    <url>dbc:h2:~/huboy </url>
+                    <url>jdbc:h2:~/huboy </url>
                     <user>huangbo</user>
                     <password>123</password>
                 </configuration>

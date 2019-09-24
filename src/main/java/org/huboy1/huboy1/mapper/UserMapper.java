@@ -9,9 +9,9 @@ import org.huboy1.huboy1.model.User;
 @Mapper
 public interface UserMapper {
     //@Select("select * from huboy.h_user")
-    @Insert("insert into huboy.h_user (account_id,name,token,gmt_create,gmt_modified) values (#{accountId},#{name},#{token},#{gmtCreate},#{gmtModified})")
+    @Insert("insert into huboy.user1 (account_id,name,token,gmt_create,gmt_modified) values (#{accountId},#{name},#{token},#{gmtCreate},#{gmtModified})")
     void insert(User user);
-    @Select("select * from huboy.h_user where token = #{token}")
+    @Select("select * from huboy.user1 where token = #{token}")
     User findByToken(@Param("token") String token);
     //User select();
 }
